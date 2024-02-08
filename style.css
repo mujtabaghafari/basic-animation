@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    overflow-x: hidden;
+}
+.sky{
+    height: 25%;
+    width: 100%;
+    background: #6cb2e4;
+}
+.sky img{
+    height: 100%;
+    width: 100%;
+}
+.grass{
+    height: 20%;
+    background: #579c1c;
+}
+.road img{
+    width: 100%;
+    height: 100%;
+}
+.last-child {
+    margin-top: -10px;
+    height: 25%;
+    background: #579c1c;
+}
+.leftbikers{
+    position: absolute;
+    height: 10%;
+    bottom: 36%;
+    right: 0;
+}
+.rightbikers{
+    position: absolute;
+    height: 10%;
+    left: 0;
+    bottom: 45%;
+}
+.rightbikers .biker4{
+    animation: rightdrive 6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.rightbikers .biker5{
+    animation: rightdrive 8s; 
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+
+}
+.leftbikers img, .rightbikers img{
+    height: 100%;
+    object-fit: cover;
+}
+.leftbikers .bike1{
+    animation: driveleft 6s;
+    animation-iteration-count: infinite;
+}
+.leftbikers .bike3{
+    position: absolute;
+    animation: driveleft 7s;
+    animation-iteration-count: infinite;
+    bottom: 20%;
+}
+.leftbikers .bike2{
+    position: absolute;
+    animation: driveleft 7s;
+    animation-iteration-count: infinite;
+    bottom: 34%;
+}
+
+@keyframes driveleft{
+    from{transform: translateX(0);}
+    to{transform: translateX(-2000px);}
+}
+@keyframes rightdrive {
+    from{transform: translateX(0);}
+    to{transform: translateX(1500px);}
+}
